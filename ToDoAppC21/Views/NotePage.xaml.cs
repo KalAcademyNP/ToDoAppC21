@@ -1,11 +1,13 @@
 using ToDoAppC21.Models;
 
 namespace ToDoAppC21.Views;
-
+[QueryProperty(nameof(ItemId), nameof(ItemId))]
 public partial class NotePage : ContentPage
 {
     public string ItemId { 
-        set { LoadNote(value); } }
+        set { 
+            LoadNote(value); 
+        } }
     public NotePage()
 	{
 		InitializeComponent();
